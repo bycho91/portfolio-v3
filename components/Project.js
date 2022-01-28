@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TweenMax, Power3 } from "gsap";
 
 const ProjectCard = styled.div`
   width: 100%;
@@ -23,6 +24,11 @@ const ProjectImage = styled.img`
     height: 500px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     flex-basis: 1;
+    transition: all 0.8s ease;
+    &:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
   }
 `;
 
@@ -33,6 +39,11 @@ const ProjectContent = styled.div`
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position: relative;
     flex-basis: 1;
+    transition: all 0.8s ease;
+    &:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
   }
 `;
 
