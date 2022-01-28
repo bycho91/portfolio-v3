@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Blog = () => {
-  return <div>blogs</div>;
+  return <div>blogsz</div>;
 };
 
 export default Blog;
