@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Blogs = () => {
-  return <div>hellte sting</div>;
+  return <div>hellte asting</div>;
 };
 
 export default Blogs;
