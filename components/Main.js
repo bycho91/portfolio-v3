@@ -102,7 +102,7 @@ const Line2 = styled.span`
 
 const Main = () => {
   return (
-    <Container>
+    <Container data-scroll-section id="header-section">
       <Wrapper>
         <Top>
           <HeadshotImage src="/images/headshot.png" />

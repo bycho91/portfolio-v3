@@ -1,42 +1,29 @@
 import styled from "styled-components";
 
-const ProjectWrapper = styled.div`
-  outline: 1px solid white;
-  height: 100%;
+const ProjectCard = styled.div`
+  width: 100vw;
+  padding: 20px 5vw;
   display: flex;
-  width: 100%;
-  flex-basis: 100%;
-`;
-const ProjectItem = styled.div`
-  flex: 2;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  will-change: transform;
+  color: white;
+  gap: 2em;
 `;
 const ProjectImage = styled.img`
-  flex: 2;
+  background-size: cover;
+
+  background-position: center;
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
-const ProjectContent = styled.div`
-  position: absolute;
-  bottom: 10%;
-  z-index: 1;
-  // transform: translateX(-20%);
-  color: white;
-  mix-blend-mode: difference;
+
+const ProjectInfo = styled.div``;
+
+const Title = styled.h1`
+  font-size: 5vw;
 `;
-const ProjectTitle = styled.h1`
-  line-height: 3vw;
-  font-weight: 600;
-  font-size: 3vw;
-`;
-const ProjectDescription = styled.h6`
-  position: relative;
-  font-weight: 400;
-  font-size: 1em;
+
+const Description = styled.h6`
+  font-size: 1vw;
 `;
 
 const Project = ({
@@ -45,15 +32,13 @@ const Project = ({
   updateActiveProject,
 }) => {
   return (
-    <ProjectWrapper>
-      <ProjectItem>
-        <ProjectContent>
-          <ProjectTitle>{title}</ProjectTitle>
-          <ProjectDescription>{description}</ProjectDescription>
-        </ProjectContent>
-        <ProjectImage src={image} alt={title} />
-      </ProjectItem>
-    </ProjectWrapper>
+    <ProjectCard className="project-item-wrapper">
+      <ProjectInfo>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+      </ProjectInfo>
+      <ProjectImage src={image} alt={title} />
+    </ProjectCard>
   );
 };
 export default Project;
