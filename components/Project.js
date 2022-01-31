@@ -1,122 +1,59 @@
 import styled from "styled-components";
-import { TweenMax, Power3 } from "gsap";
 
-const ProjectCard = styled.div`
-  width: 100%;
-  margin-bottom: 4em;
+const ProjectWrapper = styled.div`
+  outline: 1px solid white;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  flex-basis: 100%;
+`;
+const ProjectItem = styled.div`
+  flex: 2;
+  width: 100%;
+  height: 100%;
   position: relative;
-
-  @media (min-width: 750px) {
-    flex-direction: row;
-    justify-content: center;
-    gap: 2em;
-  }
+  will-change: transform;
 `;
-
 const ProjectImage = styled.img`
+  flex: 2;
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
-  @media (min-width: 700px) {
-    width: 700px;
-    height: 500px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    flex-basis: 1;
-    transition: all 0.8s ease;
-    &:hover {
-      transform: scale(1.02);
-      cursor: pointer;
-    }
-  }
 `;
-
 const ProjectContent = styled.div`
-  padding: 0 20px;
-  @media (min-width: 700px) {
-    max-width: 400px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    position: relative;
-    flex-basis: 1;
-    transition: all 0.8s ease;
-    &:hover {
-      transform: scale(1.02);
-      cursor: pointer;
-    }
-  }
+  position: absolute;
+  bottom: 10%;
+  z-index: 1;
+  // transform: translateX(-20%);
+  color: white;
+  mix-blend-mode: difference;
 `;
-
 const ProjectTitle = styled.h1`
-  margin-bottom: 0.3em;
-  @media (min-width: 1000px) {
-    font-size: 2.5rem;
-  }
+  line-height: 3vw;
+  font-weight: 600;
+  font-size: 3vw;
 `;
-
-const Hr = styled.span`
-  width: 50px;
-  height: 1.5px;
-  background: var(--accent-color);
-  display: block;
-`;
-
-const ProjectDescription = styled.p`
-  @media (min-width: 1000px) {
-    font-size: 1.5rem;
-  }
-`;
-
-const ProjectLinks = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  @media (min-width: 700px) {
-    position: absolute;
-    width: 100%;
-    bottom: 5%;
-    left: 0;
-  }
-`;
-
-const ProjectLinkItem = styled.a`
-  color: var(--accent-color);
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 10px 20px;
-
-  &:hover {
-    cursor: pointer;
-    color: black;
-    background: white;
-  }
-
-  @media (min-width: 1000px) {
-    font-size: 1.2rem;
-  }
+const ProjectDescription = styled.h6`
+  position: relative;
+  font-weight: 400;
+  font-size: 1em;
 `;
 
 const Project = ({
   project: { id, title, description, image, tags, source, visit },
+  index,
+  updateActiveProject,
 }) => {
   return (
-    <ProjectCard>
-      <ProjectImage src={image} alt={title} />
-      <ProjectContent>
-        <ProjectTitle>{title}</ProjectTitle>
-        <Hr />
-        <ProjectDescription>{description}</ProjectDescription>
-        <ProjectLinks>
-          <ProjectLinkItem href={source} target="_blank">
-            {`\<code\/\>`}
-          </ProjectLinkItem>
-          <ProjectLinkItem href={visit} target="_blank">
-            Visit Site
-          </ProjectLinkItem>
-        </ProjectLinks>
-      </ProjectContent>
-    </ProjectCard>
+    <ProjectWrapper>
+      <ProjectItem>
+        <ProjectContent>
+          <ProjectTitle>{title}</ProjectTitle>
+          <ProjectDescription>{description}</ProjectDescription>
+        </ProjectContent>
+        <ProjectImage src={image} alt={title} />
+      </ProjectItem>
+    </ProjectWrapper>
   );
 };
-
 export default Project;

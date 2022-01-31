@@ -1,13 +1,20 @@
 import styled from "styled-components";
-import { projects } from "../static/projects/projectsData";
+import { useEffect, useState } from "react";
+import { projectsData } from "../static/projects/projectsData";
 import Project from "./Project";
 
 const Container = styled.section`
-  width: 100%;
+  width: 400%;
+  height: 80vh;
+  background: #d53f41;
+  padding: 2em 5vw;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 5vw 0;
 `;
 
 const Title = styled.h2`
-  color: var(--accent-color);
+  color: white;
   letter-spacing: 0.3em;
   font-size: 2rem;
   text-align: center;
@@ -23,12 +30,21 @@ const Hr = styled.span`
 `;
 
 const Projects = () => {
+  const [activeProject, setActiveProject] = useState(1);
+
+  const updateActiveProject = () => {};
+
   return (
     <Container>
-      <Title>PROJECTS2</Title>
-      <Hr />
-      {projects.map((project) => (
-        <Project project={project} key={project.id} />
+      {/* <Title>PROJECTS2</Title>
+      <Hr /> */}
+      {projectsData.map((project, index) => (
+        <Project
+          project={project}
+          key={project.id}
+          index={index}
+          updateActiveProject={(index) => setActiveProject(index + 1)}
+        />
       ))}
     </Container>
   );
