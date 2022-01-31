@@ -25,7 +25,7 @@ const Hr = styled.span`
 const Projects = () => {
   return (
     <Container>
-      <Title>PROJECTS</Title>
+      <Title>PROJECTS2</Title>
       <Hr />
       {projects.map((project) => (
         <Project project={project} key={project.id} />
