@@ -105,7 +105,7 @@ const Main = () => {
     <Container>
       <Wrapper>
         <Top>
-          <HeadshotImage src="/images/headshot.png" />
+          <HeadshotImage src="/images/headshot.jpg" />
 
           <TopInfo>
             <Title>Benjamin Cho</Title>
