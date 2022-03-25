@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const ProjectCard = styled.div`
+const ProjectCard = styled(motion.div)`
   width: 100vw;
   padding: 20px 5vw;
   display: flex;

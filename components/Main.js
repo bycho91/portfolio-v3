@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
