@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
 import { Main, Projects, Footer } from "../components";
+import CustomCursor from "../components/CustomCursor";
+
 
 const MainContainer = styled.div`
   width: 100%;
@@ -9,7 +11,8 @@ const MainContainer = styled.div`
 
 export default function Home() {
   return (
-    <MainContainer>
+    <MainContainer data-scroll-container id="main-container">
+      <CustomCursor />
       <Head>
         <title>Benjamin C | Portfolio</title>
         <meta name="description" content="Benjamin's Portfolio" />

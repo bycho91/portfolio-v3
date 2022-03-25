@@ -1,36 +1,49 @@
 import styled from "styled-components";
-import { projects } from "../static/projects/projectsData";
+import { useEffect, useState, useRef } from "react";
+import { projectsData } from "../static/projects/projectsData";
 import Project from "./Project";
+import { motion } from "framer-motion";
 
-const Container = styled.section`
-  width: 100%;
+const ProjectsContainer = styled.section`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 600%;
+  height: 80vh;
+  background: #d53f41;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 5vw 0;
 `;
 
 const Title = styled.h2`
-  color: var(--accent-color);
+  color: white;
   letter-spacing: 0.3em;
   font-size: 2rem;
-  text-align: center;
 `;
 
-const Hr = styled.span`
-  width: 50px;
-  height: 1.5px;
-  display: block;
-  background-color: var(--accent-color);
-  margin: 0 auto;
-  margin-bottom: 2em;
+const ProjectsCarousel = styled(motion.div)`
+  width: 400%;
+  overflow-x: hidden;
 `;
 
 const Projects = () => {
   return (
-    <Container>
-      <Title>PROJECTS</Title>
-      <Hr />
-      {projects.map((project) => (
-        <Project project={project} key={project.id} />
-      ))}
-    </Container>
+    <ProjectsContainer>
+      <Wrapper>
+        <Title>PROJECTS2</Title>
+        <ProjectsCarousel animate={{ rotate: 360 }}>
+          {projectsData.map((project, index) => (
+            <Project project={project} key={project.id} />
+          ))}
+        </ProjectsCarousel>
+      </Wrapper>
+    </ProjectsContainer>
   );
 };
 
