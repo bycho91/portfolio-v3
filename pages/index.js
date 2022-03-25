@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import { Main, Projects } from "../components";
+import { Main, Projects, Footer } from "../components";
 import CustomCursor from "../components/CustomCursor";
+
 
 const MainContainer = styled.div`
   width: 100%;
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Main />
       <Projects />
+      <Footer />
     </MainContainer>
   );
 }
