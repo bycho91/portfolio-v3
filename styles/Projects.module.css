@@ -1,0 +1,126 @@
+.sectionContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsContainer {
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* PROJECT CARD */
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.active {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.projectCard {
+  min-height: 260px;
+  width: 95vw;
+  max-width: 700px;
+  min-width: 400px;
+  margin: 0 auto;
+  color: black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 1em;
+  transition: 0.2s all ease;
+
+  /* DISABLES TEXT SELECTION */
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.projectCard:hover {
+  background-color: white;
+}
+
+.projectInfo {
+  width: 60%;
+  min-width: 300px;
+}
+
+.title {
+  letter-spacing: 0.1em;
+  font-size: 2rem;
+  margin: unset;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+.projectImage {
+  background-size: cover;
+  border-radius: 10px;
+  background-position: center;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.imageContainer {
+  border-radius: 10px;
+}
+
+.linksContainer {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+}
+
+.icon {
+  transition: 0.2s ease all;
+  border-radius: 50%;
+  padding: 0.3em;
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: whitesmoke;
+  color: black;
+}
+
+.bigArrow {
+  margin-left: 2em;
+}
+
+@media (min-width: 800px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+
+  .projectCard {
+    flex-direction: row;
+  }
+}

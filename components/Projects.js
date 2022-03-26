@@ -1,49 +1,29 @@
-import styled from "styled-components";
-import { useEffect, useState, useRef } from "react";
-import { projectsData } from "../static/projects/projectsData";
-import Project from "./Project";
-import { motion } from "framer-motion";
-
-const ProjectsContainer = styled.section`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Wrapper = styled.div`
-  position: relative;
-  width: 600%;
-  height: 80vh;
-  background: #d53f41;
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 5vw 0;
-`;
-
-const Title = styled.h2`
-  color: white;
-  letter-spacing: 0.3em;
-  font-size: 2rem;
-`;
-
-const ProjectsCarousel = styled(motion.div)`
-  width: 400%;
-  overflow-x: hidden;
-`;
+import { projectsData } from '../static/projects/projectsData';
+import Project from './Project';
+import { motion } from 'framer-motion';
+import styles from '../styles/Projects.module.css';
+import { Grid } from '@material-ui/core';
 
 const Projects = () => {
   return (
-    <ProjectsContainer>
-      <Wrapper>
-        <Title>PROJECTS2</Title>
-        <ProjectsCarousel animate={{ rotate: 360 }}>
-          {projectsData.map((project, index) => (
-            <Project project={project} key={project.id} />
-          ))}
-        </ProjectsCarousel>
-      </Wrapper>
-    </ProjectsContainer>
+    <section className={styles.sectionContainer}>
+      <h1 className={styles.sectionTitle}>PROJECTS</h1>
+      <Grid container spacing={2} className={styles.projectsContainer}>
+        {projectsData.map((project) => (
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            key={project.id}
+            className={styles.project}
+          >
+            <Project project={project} />
+          </Grid>
+        ))}
+      </Grid>
+    </section>
   );
 };
 

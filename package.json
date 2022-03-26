@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "axios": "^0.25.0",
     "framer-motion": "^6.2.3",
     "gsap": "^3.9.1",

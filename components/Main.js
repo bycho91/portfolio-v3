@@ -1,173 +1,94 @@
-import styled from "styled-components";
-import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { motion } from "framer-motion";
-
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid whitesmoke;
-  position: relative;
-`;
-
-const Wrapper = styled.div`
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2em;
-`;
-
-const Top = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5em;
-`;
-
-const HeadshotImage = styled.img`
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto;
-`;
-
-const TopInfo = styled.div`
-  line-height: 10px;
-
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  font-weight: 700;
-  font-size: 3rem;
-`;
-
-const Subtitle = styled.h3`
-  color: #eb5e28;
-  letter-spacing: 0.2em;
-`;
-
-const SocialMediaIcons = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-`;
-
-const Icon = styled.a`
-  font-size: 1.5rem;
-  &:hover {
-    color: ${(props) => props.color};
-    cursor: pointer;
-  }
-`;
-
-const Bottom = styled.div`
-  width: 100%;
-`;
-
-const IntroContent = styled.div`
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 2em;
-  padding: 0 20px;
-  font-weight: 400;
-
-  @media (min-width: 800px) {
-    font-size: 1.3rem;
-  }
-`;
-
-const Line = styled.span`
-  position: absolute;
-  width: 5000px;
-  height: 1px;
-  background-color: var(--accent-color);
-  transform: rotate(-45deg);
-  top: 0;
-`;
-const Line2 = styled.span`
-  position: absolute;
-  width: 5000px;
-  height: 1px;
-  background-color: var(--accent-color);
-  transform: rotate(-45deg);
-  top: 70%;
-`;
+import Image from 'next/image';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { motion } from 'framer-motion';
+import styles from '../styles/Main.module.css';
 
 const Main = () => {
   return (
-    <Container data-scroll-section id="header-section">
-      <Wrapper>
-        <Top>
-          <HeadshotImage src="/images/headshot.jpg" />
+    <section
+      className={styles.containerSection}
+      data-scroll-section
+      id='header-section'
+    >
+      <div className={styles.wrapper}>
+        <div className='top'>
+          <div className={styles.imageBox}>
+            <Image
+              className={styles.headshotImage}
+              width='180px'
+              height='180px'
+              src='/images/headshot.jpg'
+              alt='headshot'
+            />
+          </div>
 
-          <TopInfo>
-            <Title>Benjamin Cho</Title>
-            <Subtitle>front-end engineer</Subtitle>
-          </TopInfo>
-          <SocialMediaIcons>
-            <Icon
-              color="#1da1f2"
-              href="https://github.com/bycho91"
-              target="_blank"
+          <div className={styles.topInfo}>
+            <h1 className={styles.title}>Benjamin Cho</h1>
+            <h4 className={styles.subtitle}>front-end engineer</h4>
+          </div>
+          <div className={styles.socialMediaIcons}>
+            <a
+              className={styles.icon}
+              href='https://github.com/bycho91'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <FaTwitter />
-            </Icon>
-            <Icon
-              color="#CDD9E5"
-              href="https://github.com/bycho91"
-              target="_blank"
+            </a>
+            <a
+              className={styles.icon}
+              href='https://github.com/bycho91'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <FaGithub />
-            </Icon>
+            </a>
 
-            <Icon
-              color="#0a66c2"
-              href="https://www.linkedin.com/in/bchomba/"
-              target="_blank"
+            <a
+              className={styles.icon}
+              href='https://www.linkedin.com/in/bchomba/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <FaLinkedin />
-            </Icon>
-            <Icon
-              color="#eb5e28"
-              href="mailto: bycho1991@gmail.com"
-              target="_blank"
+            </a>
+            <a
+              className={styles.icon}
+              href='mailto: bycho1991@gmail.com'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <HiOutlineMail />
-            </Icon>
-          </SocialMediaIcons>
-        </Top>
-        <Bottom>
-          <IntroContent>
+            </a>
+          </div>
+        </div>
+        <div className={styles.bottom}>
+          <p className={styles.introContent}>
             Hi there! I am an engineer based out of <strong>Dallas, TX</strong>.
             I enjoy using React to create fun projects, and I love tinkering
             with new tech. Currently I am working as a QA Engineer at Samsung,
             but my goal is to have a career building out beautiful looking
             components for the web. Feel free to reach out on any of my socials
-            or just check out my CV{" "}
+            or just check out my CV{' '}
             <span>
               <a
-                href=""
+                href='https://shorturl.at/etJPZ'
+                target='_blank'
+                rel='noopener noreferrer'
                 style={{
-                  color: "var(--accent-color)",
-                  textDecoration: "underline",
+                  color: 'var(--accent-color)',
+                  textDecoration: 'underline',
                 }}
               >
                 here
               </a>
             </span>
             .
-          </IntroContent>
-        </Bottom>
-      </Wrapper>
-    </Container>
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

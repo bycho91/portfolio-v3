@@ -1,7 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import React from 'react';
+import styled from 'styled-components';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import styles from '../styles/Footer.module.css';
 
 const FooterContainer = styled.section`
   border-top: 1px solid whitesmoke;
@@ -29,32 +30,41 @@ const Icon = styled.a`
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <SocialMediaIcons>
-        <Icon color="#1da1f2" href="https://github.com/bycho91" target="_blank">
+    <section className={styles.footerContainer}>
+      <div className={styles.socialMediaIcons}>
+        <a
+          className={styles.icon}
+          href='https://github.com/bycho91'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaTwitter />
-        </Icon>
-        <Icon color="#CDD9E5" href="https://github.com/bycho91" target="_blank">
+        </a>
+        <Icon
+          href='https://github.com/bycho91'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaGithub />
         </Icon>
 
         <Icon
-          color="#0a66c2"
-          href="https://www.linkedin.com/in/bchomba/"
-          target="_blank"
+          href='https://www.linkedin.com/in/bchomba/'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <FaLinkedin />
         </Icon>
         <Icon
-          color="#eb5e28"
-          href="mailto: bycho1991@gmail.com"
-          target="_blank"
+          href='mailto: bycho1991@gmail.com'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           <HiOutlineMail />
         </Icon>
-      </SocialMediaIcons>
+      </div>
       <div>Benjamin Portfolio &copy;</div>
-    </FooterContainer>
+    </section>
   );
 };
 
