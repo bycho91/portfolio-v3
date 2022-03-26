@@ -11,7 +11,12 @@ const Main = () => {
       data-scroll-section
       id='header-section'
     >
-      <div className={styles.wrapper}>
+      <motion.div
+        className={styles.wrapper}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <div className='top'>
           <div className={styles.imageBox}>
             <Image
@@ -24,10 +29,29 @@ const Main = () => {
           </div>
 
           <div className={styles.topInfo}>
-            <h1 className={styles.title}>Benjamin Cho</h1>
-            <h4 className={styles.subtitle}>front-end engineer</h4>
+            <motion.h1
+              className={styles.title}
+              initial={{ x: -300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              Benjamin Cho
+            </motion.h1>
+            <motion.h4
+              className={styles.subtitle}
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1 }}
+            >
+              front-end engineer
+            </motion.h4>
           </div>
-          <div className={styles.socialMediaIcons}>
+          <motion.div
+            className={styles.socialMediaIcons}
+            initial={{ y: -500, opacity: 0 }}
+            animate={{ y: 0, opacity: 1, type: 'spring', stiffness: 2000 }}
+            transition={{ delay: 1.5 }}
+          >
             <a
               className={styles.icon}
               href='https://github.com/bycho91'
@@ -61,7 +85,7 @@ const Main = () => {
             >
               <HiOutlineMail />
             </a>
-          </div>
+          </motion.div>
         </div>
         <div className={styles.bottom}>
           <p className={styles.introContent}>
@@ -87,7 +111,7 @@ const Main = () => {
             .
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
