@@ -15,7 +15,7 @@ const Projects = () => {
             xs={12}
             sm={12}
             md={12}
-            lg={12}
+            lg={6}
             key={project.id}
             className={styles.project}
           >

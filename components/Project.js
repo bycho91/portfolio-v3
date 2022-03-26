@@ -50,7 +50,7 @@ const Project = ({
           </div>
         </motion.div>
         <AnimatePresence>
-          {isOpen ? (
+          {isOpen && (
             <motion.div
               className={styles.imageContainer}
               initial={{ x: 20, opacity: 0 }}
@@ -65,10 +65,6 @@ const Project = ({
                 alt={title}
                 className={styles.projectImage}
               />
-            </motion.div>
-          ) : (
-            <motion.div className={styles.bigArrow}>
-              <MdArrowBackIosNew size='4rem' />
             </motion.div>
           )}
         </AnimatePresence>
