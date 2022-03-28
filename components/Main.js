@@ -54,14 +54,6 @@ const Main = () => {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaTwitter />
-            </a>
-            <a
-              className={styles.icon}
-              href='https://github.com/bycho91'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
               <FaGithub />
             </a>
 
