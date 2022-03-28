@@ -87,10 +87,9 @@ const Main = () => {
           <p className={styles.introContent}>
             Hi there! I am an engineer based out of <strong>Dallas, TX</strong>.
             I enjoy using React to create fun projects, and I love tinkering
-            with new tech. Currently I am working as a QA Engineer at Samsung,
-            but my goal is to have a career building out beautiful looking
-            components for the web. Feel free to reach out on any of my socials
-            or just check out my CV{' '}
+            with new tech. I enjoy creating components with beautiful UI in my
+            spare time. Feel free to reach out on any of my socials or just
+            check out my CV{' '}
             <span>
               <a
                 href='https://www.dropbox.com/s/cbqn77vcuinvkxk/benjamin_cho_fe_resume.pdf?dl=0'

@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   gap: 1em;
+  padding-left: 1em;
 }
 
 .icon {
@@ -21,4 +22,8 @@
 
 .icon:hover {
   cursor: pointer;
+}
+
+.text {
+  padding-left: 2em;
 }

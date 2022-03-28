@@ -41,7 +41,7 @@ const Footer = () => {
           <HiOutlineMail />
         </a>
       </div>
-      <div>Benjamin Portfolio &copy;</div>
+      <div styles={styles.text}>Benjamin Portfolio &copy;</div>
     </section>
   );
 };
