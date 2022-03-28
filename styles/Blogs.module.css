@@ -19,6 +19,10 @@
   padding: 1em;
 }
 
+.title {
+  font-size: 1.5rem;
+}
+
 .icon {
   color: var(--accent-color);
   margin-top: 1em;

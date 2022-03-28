@@ -6,7 +6,7 @@ import Tags from './Tags';
 const Blog = ({ data }) => {
   return (
     <div className={styles.blogCard}>
-      <h3>{data.title}</h3>
+      <h3 className={styles.title}>{data.title}</h3>
       <p>{data.description}</p>
       <Tags data={data.tags} />
       <div className={styles.icon}>

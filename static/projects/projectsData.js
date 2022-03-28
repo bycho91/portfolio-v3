@@ -31,7 +31,7 @@ export const projectsData = [
     id: 2,
   },
   {
-    title: 'OpenAI (Design Mockup)',
+    title: 'OpenAI (Design)',
     description:
       'Mockup of a website designed by AR Shakir. Note: No functionality within the site.',
     image: '/images/gpt3.png',
@@ -41,7 +41,7 @@ export const projectsData = [
     id: 3,
   },
   {
-    title: 'CSS Gameboy Color',
+    title: 'CSS Gameboy',
     description:
       'This is just a fun project I did using minimal HTML and pure CSS to learn more about positioning.',
     image: '/images/gameboy.png',
@@ -51,7 +51,7 @@ export const projectsData = [
     id: 5,
   },
   {
-    title: 'Travel Planning App',
+    title: 'Travel Planning',
     description:
       'Users are able to find nearby restaurants, hotels, and attractions through search.',
     image: '/images/travel.png',
