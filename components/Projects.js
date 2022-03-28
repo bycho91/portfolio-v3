@@ -3,11 +3,13 @@ import Project from './Project';
 import { motion } from 'framer-motion';
 import styles from '../styles/Projects.module.css';
 import { Grid } from '@material-ui/core';
+import Tech from './Tech';
 
 const Projects = () => {
   return (
     <section className={styles.sectionContainer}>
       <h1 className={styles.sectionTitle}>PROJECTS</h1>
+      <Tech />
       <Grid container spacing={2} className={styles.projectsContainer}>
         {projectsData.map((project) => (
           <Grid

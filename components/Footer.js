@@ -1,32 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import styles from '../styles/Footer.module.css';
-
-const FooterContainer = styled.section`
-  border-top: 1px solid whitesmoke;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  padding: 20px 100px;
-`;
-
-const SocialMediaIcons = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-`;
-
-const Icon = styled.a`
-  font-size: 1.5rem;
-  &:hover {
-    color: ${(props) => props.color};
-    cursor: pointer;
-  }
-`;
 
 const Footer = () => {
   return (
@@ -40,28 +15,31 @@ const Footer = () => {
         >
           <FaTwitter />
         </a>
-        <Icon
+        <a
+          className={styles.icon}
           href='https://github.com/bycho91'
           target='_blank'
           rel='noopener noreferrer'
         >
           <FaGithub />
-        </Icon>
+        </a>
 
-        <Icon
+        <a
+          className={styles.icon}
           href='https://www.linkedin.com/in/bchomba/'
           target='_blank'
           rel='noopener noreferrer'
         >
           <FaLinkedin />
-        </Icon>
-        <Icon
+        </a>
+        <a
+          className={styles.icon}
           href='mailto: bycho1991@gmail.com'
           target='_blank'
           rel='noopener noreferrer'
         >
           <HiOutlineMail />
-        </Icon>
+        </a>
       </div>
       <div>Benjamin Portfolio &copy;</div>
     </section>

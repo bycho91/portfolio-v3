@@ -1,22 +1,24 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styled from 'styled-components';
 import { Main, Projects, Footer } from '../components';
+import BlogList from '../components/BlogList';
 import CustomCursor from '../components/CustomCursor';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="main-container" data-scroll-container id="main-container">
+    <div className='main-container'>
       <CustomCursor />
       <Head>
         <title>Benjamin C | Portfolio</title>
-        <meta name="description" content="Benjamin's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content="Benjamin's Portfolio" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <Main />
       <Projects />
+      <BlogList />
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

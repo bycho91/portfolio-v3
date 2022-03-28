@@ -6,11 +6,7 @@ import styles from '../styles/Main.module.css';
 
 const Main = () => {
   return (
-    <section
-      className={styles.containerSection}
-      data-scroll-section
-      id='header-section'
-    >
+    <section className={styles.containerSection}>
       <motion.div
         className={styles.wrapper}
         initial={{ opacity: 0 }}
@@ -97,7 +93,7 @@ const Main = () => {
             or just check out my CV{' '}
             <span>
               <a
-                href='https://shorturl.at/etJPZ'
+                href='https://www.dropbox.com/s/cbqn77vcuinvkxk/benjamin_cho_fe_resume.pdf?dl=0'
                 target='_blank'
                 rel='noopener noreferrer'
                 style={{
