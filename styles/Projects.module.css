@@ -53,7 +53,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 0 1em;
+  padding: 1em;
   transition: 0.2s all ease;
 
   /* DISABLES TEXT SELECTION */
@@ -93,6 +93,7 @@
 
 .imageContainer {
   border-radius: 10px;
+  padding: 1em 0;
 }
 
 .linksContainer {
