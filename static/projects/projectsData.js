@@ -2,9 +2,9 @@ export const projectsData = [
   {
     title: 'Budgety',
     description:
-      'Full stack web app built out in a team of 3. User has access to authentication signup/login. User is also able to create, read, update, and delete budgets/transactions.',
+      'Full stack web app built out in a team. User has access to authentication and full CRUD capabilities.',
     image: '/images/budgety.png',
-    tags: ['React', 'Typescript', 'Nest', 'React Query'],
+    tagsArr: ['React', 'Typescript', 'Nest', 'React Query'],
     source: 'https://github.com/bretpeters3n/seal-team-3',
     visit: 'https://budgety-front.uc.r.appspot.com/',
     id: 0,
@@ -15,7 +15,7 @@ export const projectsData = [
     description:
       'A website containing information about cryptocurrencies and the latest news. Fetches data using the Coinrank API and Bing Search API',
     image: '/images/crypto.png',
-    tags: ['React', 'SCSS', 'React Query', 'API'],
+    tagsArr: ['React', 'SCSS', 'React Query', 'API'],
     source: 'https://github.com/bycho91/crypto-v2',
     visit: 'http://cryptverse.xyz',
     id: 1,
@@ -25,7 +25,7 @@ export const projectsData = [
     description:
       'Built out a fully responsive tip calculator web app using vanilla JS, HTML and SCSS. Followed a design provided by FEM Challenges',
     image: '/images/splitter.png',
-    tags: ['Sass', 'JavaScript', 'HTML'],
+    tagsArr: ['Sass', 'JavaScript', 'HTML'],
     source: 'https://github.com/bycho91/fem-calculator',
     visit: 'http://bencalc.xyz',
     id: 2,
@@ -35,7 +35,7 @@ export const projectsData = [
     description:
       'Mockup of a website designed by AR Shakir. Note: No functionality within the site.',
     image: '/images/gpt3.png',
-    tags: ['React', 'CSS', 'JSX'],
+    tagsArr: ['React', 'CSS', 'JSX'],
     source: 'https://github.com/bycho91/GPT3-mock-website',
     visit: 'http://openai-gpt3.xyz',
     id: 3,
@@ -45,7 +45,7 @@ export const projectsData = [
     description:
       'This is just a fun project I did using minimal HTML and pure CSS to learn more about positioning.',
     image: '/images/gameboy.png',
-    tags: ['HTML', 'SCSS', 'Codepen'],
+    tagsArr: ['HTML', 'SCSS', 'Codepen'],
     source: 'https://codepen.io/bycho91/pen/JjRgyZe',
     visit: 'https://codepen.io/bycho91/pen/JjRgyZe',
     id: 5,
@@ -53,9 +53,9 @@ export const projectsData = [
   {
     title: 'Travel Planning App',
     description:
-      'Users are able to find nearby restaurants, hotels, and attractions. Search function will change the coordinates. Note: API may have reached 100% usage rate.',
+      'Users are able to find nearby restaurants, hotels, and attractions through search.',
     image: '/images/travel.png',
-    tags: ['React', 'API', 'HTML', 'CSS', 'MUI'],
+    tagsArr: ['React', 'API', 'HTML', 'CSS', 'MUI'],
     source: 'https://github.com/bycho91/TravelPlanz-website',
     visit: 'http://travelplanz.xyz/',
     id: 6,

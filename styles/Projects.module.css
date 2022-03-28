@@ -113,8 +113,8 @@
   transform: scale(1.1);
 }
 
-.bigArrow {
-  margin-left: 2em;
+.tagsContainer {
+  margin-top: 2em;
 }
 
 @media (min-width: 800px) {

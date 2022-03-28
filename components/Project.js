@@ -5,9 +5,10 @@ import { AnimatePresence } from 'framer-motion';
 import styles from '../styles/Projects.module.css';
 import { BsCodeSlash } from 'react-icons/bs';
 import { CgLaptop } from 'react-icons/cg';
-import { MdArrowBackIosNew } from 'react-icons/md';
+import Tags from './Tags';
+
 const Project = ({
-  project: { id, title, description, image, tags, source, visit },
+  project: { id, title, description, image, tags, source, visit, tagsArr },
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -47,6 +48,9 @@ const Project = ({
             >
               <CgLaptop size='1.5rem' />
             </a>
+          </div>
+          <div styles={styles.tagsContainer}>
+            <Tags data={tagsArr} />
           </div>
         </motion.div>
         <AnimatePresence>
