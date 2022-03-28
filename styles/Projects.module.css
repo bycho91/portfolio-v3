@@ -81,6 +81,7 @@
 
 .description {
   font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .projectImage {
@@ -125,5 +126,9 @@
 
   .projectCard {
     flex-direction: row;
+  }
+
+  .projectImage {
+    padding: 1em;
   }
 }
