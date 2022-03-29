@@ -19,8 +19,16 @@
   padding: 1em;
 }
 
+.imageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 .title {
   font-size: 1.5rem;
+  margin: unset;
 }
 
 .icon {

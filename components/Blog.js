@@ -1,14 +1,17 @@
 import styles from '../styles/Blogs.module.css';
 import { CgNotes } from 'react-icons/cg';
 import { Grid } from '@material-ui/core';
+import Image from 'next/image';
 import Tags from './Tags';
 
 const Blog = ({ data }) => {
   return (
     <div className={styles.blogCard}>
-      <h3 className={styles.title}>{data.title}</h3>
+      <div className={styles.imageContainer}>
+        <h3 className={styles.title}>{data.title}</h3>
+        <Image width={40} height={40} src={data.imgUrl} alt={data.title} />
+      </div>
       <p>{data.description}</p>
-      <Tags data={data.tags} />
       <div className={styles.icon}>
         <a href={data.source} target='_blank' rel='noopener noreferrer'>
           <CgNotes size='2rem' />
