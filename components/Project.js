@@ -10,12 +10,16 @@ import Tags from './Tags';
 const Project = ({
   project: { id, title, description, image, tags, source, visit, tagsArr },
 }) => {
+  const openSite = () => {
+    window.open(visit, '_blank');
+  };
   return (
     <div className={`${styles.projectContainer}`}>
       <motion.div
         layout='position'
         transition={{ layout: { duration: 1 } }}
         className={styles.projectCard}
+        onClick={openSite}
       >
         <div className={styles.topContainer}>
           <motion.div
