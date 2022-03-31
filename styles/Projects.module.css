@@ -40,10 +40,7 @@
 }
 
 .projectCard {
-  min-height: 260px;
-  width: 95vw;
-  max-width: 700px;
-  min-width: 400px;
+  height: 600px;
   margin: 0 auto;
   color: black;
   border-radius: 10px;
@@ -51,9 +48,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1em;
   cursor: pointer;
-  padding: 0 1em;
+  padding: 1em;
   transition: 0.2s all ease;
 
   /* DISABLES TEXT SELECTION */
@@ -68,9 +66,22 @@
   background-color: white;
 }
 
+.topContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.bottomContainer {
+  padding: unset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
 .projectInfo {
-  width: 60%;
-  min-width: 300px;
 }
 
 .title {
@@ -84,22 +95,22 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
-.projectImage {
-  background-size: cover;
-  border-radius: 10px;
-  background-position: center;
-  object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-
 .imageContainer {
   border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.projectImage {
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 .linksContainer {
   width: 100%;
   display: flex;
-  gap: 2em;
+  justify-content: space-between;
 }
 
 .icon {
@@ -115,16 +126,12 @@
 }
 
 .tagsContainer {
-  margin-top: 2em;
+  padding: unset;
 }
 
 @media (min-width: 800px) {
   .sectionTitle {
     font-size: 3rem;
-  }
-
-  .projectCard {
-    flex-direction: row;
   }
 
   .imageContainer {

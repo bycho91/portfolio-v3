@@ -37,6 +37,16 @@
   text-align: right;
 }
 
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
 .tag {
   background-color: white;
   font-size: 0.8rem;

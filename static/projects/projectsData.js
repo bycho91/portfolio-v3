@@ -9,6 +9,16 @@ export const projectsData = [
     visit: 'https://budgety-front.uc.r.appspot.com/',
     id: 0,
   },
+  {
+    title: 'PERN.TODO',
+    description:
+      'A todo web app built using PERN stack. Has full CRUD capabilities for user.',
+    image: '/images/perntodo.png',
+    tagsArr: ['React', 'Postgres', 'Express', 'Heroku'],
+    source: 'https://github.com/bycho91/full-stack-todos',
+    visit: 'http://pern-stack-todos.herokuapp.com/',
+    id: 4,
+  },
 
   {
     title: 'CryptVerse',
@@ -30,16 +40,16 @@ export const projectsData = [
     visit: 'http://bencalc.xyz',
     id: 2,
   },
-  {
-    title: 'OpenAI (Design)',
-    description:
-      'Mockup of a website designed by AR Shakir. Note: No functionality within the site.',
-    image: '/images/gpt3.png',
-    tagsArr: ['React', 'CSS', 'JSX'],
-    source: 'https://github.com/bycho91/GPT3-mock-website',
-    visit: 'http://openai-gpt3.xyz',
-    id: 3,
-  },
+  // {
+  //   title: 'OpenAI (Design)',
+  //   description:
+  //     'Mockup of a website designed by AR Shakir. Note: No functionality within the site.',
+  //   image: '/images/gpt3.png',
+  //   tagsArr: ['React', 'CSS', 'JSX'],
+  //   source: 'https://github.com/bycho91/GPT3-mock-website',
+  //   visit: 'http://openai-gpt3.xyz',
+  //   id: 3,
+  // },
   {
     title: 'CSS Gameboy',
     description:
@@ -50,14 +60,14 @@ export const projectsData = [
     visit: 'https://codepen.io/bycho91/pen/JjRgyZe',
     id: 5,
   },
-  {
-    title: 'Travel Planning',
-    description:
-      'Users are able to find nearby restaurants, hotels, and attractions through search.',
-    image: '/images/travel.png',
-    tagsArr: ['React', 'API', 'HTML', 'CSS', 'MUI'],
-    source: 'https://github.com/bycho91/TravelPlanz-website',
-    visit: 'http://travelplanz.xyz/',
-    id: 6,
-  },
+  // {
+  //   title: 'Travel Planning',
+  //   description:
+  //     'Users are able to find nearby restaurants, hotels, and attractions through search.',
+  //   image: '/images/travel.png',
+  //   tagsArr: ['React', 'API', 'HTML', 'CSS', 'MUI'],
+  //   source: 'https://github.com/bycho91/TravelPlanz-website',
+  //   visit: 'http://travelplanz.xyz/',
+  //   id: 6,
+  // },
 ];

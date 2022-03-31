@@ -12,10 +12,14 @@ const Blog = ({ data }) => {
         <Image width={40} height={40} src={data.imgUrl} alt={data.title} />
       </div>
       <p>{data.description}</p>
-      <div className={styles.icon}>
-        <a href={data.source} target='_blank' rel='noopener noreferrer'>
-          <CgNotes size='2rem' />
-        </a>
+      <div className={styles.bottom}>
+        <p className={styles.date}>{data.date}</p>
+
+        <div className={styles.icon}>
+          <a href={data.source} target='_blank' rel='noopener noreferrer'>
+            <CgNotes size='2rem' />
+          </a>
+        </div>
       </div>
     </div>
   );

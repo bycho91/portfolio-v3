@@ -15,9 +15,9 @@ const Projects = () => {
           <Grid
             item
             xs={12}
-            sm={12}
-            md={12}
-            lg={6}
+            sm={6}
+            md={4}
+            lg={3}
             key={project.id}
             className={styles.project}
           >

@@ -10,27 +10,39 @@ import Tags from './Tags';
 const Project = ({
   project: { id, title, description, image, tags, source, visit, tagsArr },
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={`${styles.projectContainer} ${isOpen && styles.active}`}>
+    <div className={`${styles.projectContainer}`}>
       <motion.div
         layout='position'
         transition={{ layout: { duration: 1 } }}
         className={styles.projectCard}
-        onClick={(e) => {
-          if (e.target.tagName !== 'svg' && e.target.tagName !== 'path') {
-            setIsOpen(!isOpen);
-          }
-        }}
       >
-        <motion.div
-          layout='position'
-          className={`${styles.projectInfo} ${isOpen && styles.active}`}
-        >
-          <h4 className={`${styles.title} ${isOpen && styles.active}`}>
-            {title}
-          </h4>
-          <p className={styles.description}>{description}</p>
+        <div className={styles.topContainer}>
+          <motion.div
+            className={styles.imageContainer}
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3, exit: { duration: 2 } }}
+            exit={{ x: 20, opacity: 0 }}
+          >
+            <Image
+              layout='fill'
+              objectFit='cover'
+              src={image}
+              alt={title}
+              className={styles.projectImage}
+            />
+          </motion.div>
+          <motion.div layout='position' className={`${styles.projectInfo}`}>
+            <h4 className={`${styles.title}`}>{title}</h4>
+            <p className={styles.description}>{description}</p>
+          </motion.div>
+        </div>
+
+        <div className={styles.bottomContainer}>
+          <div styles={styles.tagsContainer}>
+            <Tags data={tagsArr} />
+          </div>
           <div className={styles.linksContainer}>
             <a
               className={styles.icon}
@@ -49,29 +61,7 @@ const Project = ({
               <CgLaptop size='1.5rem' />
             </a>
           </div>
-          <div styles={styles.tagsContainer}>
-            <Tags data={tagsArr} />
-          </div>
-        </motion.div>
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className={styles.imageContainer}
-              initial={{ x: 20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.3, exit: { duration: 2 } }}
-              exit={{ x: 20, opacity: 0 }}
-            >
-              <Image
-                width='350px'
-                height='250px'
-                src={image}
-                alt={title}
-                className={styles.projectImage}
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        </div>
       </motion.div>
     </div>
   );
