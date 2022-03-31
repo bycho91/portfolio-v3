@@ -9,7 +9,7 @@ export const blogsData = [
     id: 0,
   },
   {
-    title: 'PERN.TODO - Full Stack',
+    title: 'PERN.TODO',
     date: 'March 30, 2022',
     description:
       'An update on my first full-stack app from scratch using PERN. Deployed to Heroku.',

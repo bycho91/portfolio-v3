@@ -53,7 +53,7 @@ export const projectsData = [
   {
     title: 'CSS Gameboy',
     description:
-      'This is just a fun project I did using minimal HTML and pure CSS to learn more about positioning.',
+      'This is just a fun project I did using minimal HTML and pure CSS to learn more about positioning and box model properties.',
     image: '/images/gameboy.png',
     tagsArr: ['HTML', 'SCSS', 'Codepen'],
     source: 'https://codepen.io/bycho91/pen/JjRgyZe',
