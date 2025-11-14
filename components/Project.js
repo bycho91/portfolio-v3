@@ -30,8 +30,10 @@ const Project = ({
             exit={{ x: 20, opacity: 0 }}
           >
             <Image
-              layout='fill'
-              objectFit='cover'
+              fill
+              width={200}
+              height={200}
+              style={{ objectFit: 'cover' }}
               src={image}
               alt={title}
               className={styles.projectImage}

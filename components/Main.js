@@ -17,8 +17,8 @@ const Main = () => {
           <div className={styles.imageBox}>
             <Image
               className={styles.headshotImage}
-              width='200px'
-              height='200px'
+              width={200}
+              height={200}
               src='/images/headshot.jpg'
               alt='headshot'
             />
